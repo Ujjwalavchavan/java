@@ -1,0 +1,94 @@
+*Is it a web or standalone project:-standalone project
+
+does the name of the file shoud be persistence.xml
+1)can the file name chnage
+can the folder name be changed
+can the root elemt of the xml file be repeat
+are there any child element 
+can it be stored any where
+from where does meta inf come
+
+*parallel vendors of hibernet
+*want to work with 2 databases 
+either the table need to be present or need to made? depends on the situation.
+
+*loading driver explicity is optional ? yes
+*java object is stored in a table as a row
+
+*how to specify our own sequence and generate primary key values
+
+difference between create and update 
+
+
+*fetch functionality for exam:-insert case:-let hibernate do.
+but for fetch functinlaty we need to create table 
+
+*how to say this property is related to particular column :-@Column(name = "first_name")
+@Column(name = "first_name" lenght =20) can be used when we need to control the length  
+
+*@GeneratedValue(strategy = GenerationType.IDENTITY)//it is used for MySql DB
+
+
+Math math=new Math();
+Scanner sc =new Scanner();
+Runtime class-->java.lang
+
+
+*if a method has return type interface (interface object cannot be made)and it returns something then it will return child class objects  
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+jpql works on column names and thus is case sensitive.....sql is not case sensitive
+
+foring key column can be null or it can point to other column.
+Is a reln means parant child reln
+has a reln--2 types depends upon each other  and dont depending ---find its mapping in xml
+-----------------------------------------------------------------------------------------------------------------------------------
+link for javax docs --> https://javaee.github.io/javaee-spec/javadocs/
+-->https://www.journaldev.com/17379/jpa-entitymanager-hibernate
+For making own library
+hibernate library:-in eclipse-->windows tab-->preferences-->java-->Bulidpath-->userlibraries-->new-->name the library-->add jars
+
+
+DBMS vs RDBMS:-DBMS didn't remeber the data whereas RDBMS does.
+
+pojo--normal bean class 
+entity--object mapping to database
+transient values --the one which we dont need to store in db but need in project like percentage or total
+
+Strategies:identity,sequence,model
+
+create--delete the  table  created by hibernet and update--updat ethe table created by hibernet
+
+factory method--returns new obejct per request
+singleton method--returns same object for every request that is already created
+
+-------------------------------------------------------------------------------------------------------------------------
+
+TRANSACTIONS:
+Transaction isolation levels:
+phantom record(commited records) and dirt record(uncommited records) & repeateble read ..serializble(secured but heavy due to many hits)
+
+transation attri (6)--required ,required new,mandetory ,supoorted,not supported ,never?
+We dont write transactions we configure them 
+
+suspend state of trans--trans cannot be roled back
+BMTbean managed server)/UT(user transaction)---nesting of transaction cannot be done if done --transaction goes to suspende state
+CMT(container managed server--nesting of transaction is allowed)-----managed with 6 attri--required ,required new,mandetory ,supoorted,not supported ,never
+-(neutral)required---ok with existing as well new transaction(which he himseelf creates) 
+,(attitude)required new--suspends the existing transaction.
+,(ego)mandetory--throws exception
+,(neutral)supoorted---ok if there is no transaction
+,(attitude)not supported 
+,(ego)never
+
+
+
+2 phases of commit----participation , action
+---------------------------------------------------------------------------------------------------------------------------------
+Relationship in hibernet
+
+one to one 
+one to many no bidirection--orphens --cascade
+many to many (achived using 3trd table)
+
