@@ -1,0 +1,89 @@
+configurations in spring ---xml,annotation,java
+
+Injection in spring:-
+constructor injection
+setter injection
+Method lookup/injection
+interface injection is not supported in spring
+
+ioc was earlier known as Beanfactory(supports lazy instantiation)-no support for i18n,no annotation support, it went till spring 2.4 
+-appli context(supports eagar instantiation)(interface) is child of bean factory and also has its own features but not replaces bean factory o support backward compatibility
+
+for web support ----WebApplicationContext
+
+implementation:
+classpath--same project
+Filepath--in same system ,like c drive
+url--on web 
+
+
+annotation
+
+
+interface is not a bean. 
+every class is bean for spring
+spring dont allow to instantiate it does on his own
+pom.xml--maven based
+-------------------------------------------------------------------------------------------------------------------------------------
+src/main/resource--configuration files
+
+application context(that gives implementation of map) is a light weight conatiner--which contains other objects
+eager and lazy instantiation
+
+<!-- bean can also be created using type but it should be unique-->
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+(3-4-2019)JPA integration with MVC
+-------------------------------------------------------------------------------------------------------------------------------------------
+spring boot
+
+jpa integration--2 confi files---persistence, appctx
+
+mvc with spring integration:-
+web .xml--confi dispatcher servlet, congiu config loader listner.
+persistence---hibernate regarding.
+spring-
+local container
+jpa transaction manager
+----------------------------------------------------------------------------------------------------------------
+Spring boot(version 2)--> kills boiler plate configurations.
+
+refer lesson no-5
+1)core project---hello-boot 
+file---new --other--spring-boot--spring starter project--change https to http---
+provide name of project and package name. (click next)
+new spring starter project dependencies--version 2.1.3(click next)
+
+create new class hello..see in eclips sts
+
+new class in same project----data-boot for mpt
+new spring starter project dependencies--select jpa
+
+
+2)spring
+3)spring mvc--with data and boot
+
+------------------------------------------------------------------
+in post man...for mvc-boot project
+http://localhost:8880/hola/ujjwala
+
+in params --in key --name in values--ujjwala
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Lab 1
+create new Maven project-->Create a simpel project-->next--->Group_id (package name) , ArtifactId(Application name) [FINISH]{PROJECT IS CREATED}
+		Open pom.xml----go to dependencies tab---click on add --type springframework  ..select aop,context,bean,tx also paste dependencies for junit from other project.
+		in src/main/java--->com.cg.ioc(pacakge)--- a bean class(Employee.java)
+		in src/main/resources--->META-INF(folder)---right click on folder --new-->Spring bean configuration file---(employee.xml(The Spring Configuration File))--go to Namespaces tab--select beans ,aop,tx,context{This changes your maven project to Spring MVC project }
+		create a bean in the xml file---<bean id="emp" class="com.cg.ioc.Employee"/>
+	
+		create a new package(com.cg.test) in --src/test/java.------create a file into it (TestEmployee.java)
+
+
+--------------------------------------------------------------------------------------------
+for lab 3 ----create dynamic web project 
+add web.xml file then modify pom.xml file
+
+
+
+
+
